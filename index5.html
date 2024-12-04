@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href= "style5.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вычисление Z</title>
+    <script>
+        function calculateZ() {
+            // Получаем значения X и Y из полей ввода
+            const x = parseFloat(document.getElementById('x').value);
+            const y = parseFloat(document.getElementById('y').value);
+            let z;
+
+            // Проверяем условие и вычисляем Z
+            if (x > y) {
+                z = x * y;
+            } else {
+                z = Math.log(x + y);
+            }
+
+            // Отображаем результат
+            document.getElementById('result').innerText = 'Результат Z: ' + z;
+        }
+    </script>
+
+    <div id='sidebar'>
+      <ul>
+        <li><a href='index.html'>Главная</li>
+        <li><a href='index2.html'>Зачем играть в шахматы </li>
+        <li><a href='index3.html'>Какие есть фигуры </a></li>
+        <li><a href='index4.html'>Шахматный этикет</a></li>
+        <li><a href='index6.html'>Паспорт</a></li>
+        <li><a href='index7.html'><b>Алгоритмическая задача</b></a></li>
+        <li><a href='index8.html'>Магазин</a></li>
+      </ul>
+    </div>
+
+
+</head>
+<body>
+    <div id="count">
+    <h1>Вычисление Z</h1>
+    <label for="x">Введите X:</label>
+    <input type="number" id="x" step="any"><br><br>
+    <label for="y">Введите Y:</label>
+    <input type="number" id="y" step="any"><br><br>
+    <button onclick="calculateZ()">Вычислить Z</button>
+     <button onclick="">Отправить</button>
+
+    <h2 id="result"></h2>
+    </div>
+</body>
+</html>

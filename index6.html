@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Паспорт РФ</title>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .passport-container {
+            position: relative;
+            display: inline-block;
+        }
+        .passport-container img {
+            width: 600px;
+            height: auto;
+        }
+        .text {
+            position: absolute;
+            color: black;
+            font-size: 1.2em;
+        }
+        #issued {
+            top: 85px;
+            left: 170px;
+        }
+        #surname {
+            top: 465px;
+            left: 350px;
+        }
+        #name {
+            top: 530px;
+            left: 340px;
+        }
+        #father {
+            top: 560px;
+            left: 325px;
+        }
+        #gender {
+            top: 590px;
+            left: 234px;
+        }
+        #birthplace {
+            top: 620px;
+            left: 340px;
+        }
+        #photo {
+            position: absolute;
+            top: 494px;
+            left: 25px;
+            width: 168px;
+            height: auto;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: grey;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+      }
+* {
+
+  padding: 0px;
+}
+
+
+nav ul{
+  list-style-type: none;
+  text-align: center;
+  text-indent: 45px;
+}
+
+nav li{
+
+  margin-top:  0px;
+  margin-right: 10px;
+  margin-left: 80px;
+  margin-bottom:  8px;
+  display: inline; /*задаем способ отображения блочных эл-в, в даном случае в строчку*/
+  height:  auto;
+}
+
+nav li a{
+  text-decoration:  none; /*убираем подчеркивание ссылок*/
+  color:  #8B4513;
+}
+nav li a:hover{
+  color:  #FFF0F5;
+}
+
+
+
+#sidebar{/*стиль общий для всего эл-та*/
+  width: 250px;
+  height: 980px;
+  margin-top: 0px;
+  margin-left:  0px;
+  margin-bottom: 0px;
+  border-radius:  5px;
+  background-color:  #e0e0e0;
+  float:  left;
+}
+
+#sidebar ul{
+  list-style-type: none;
+  text-align:  center;
+}
+
+#sidebar li{
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+#sidebar li a{
+  text-decoration:  none;
+  color:  #8B4513;
+}
+
+#sidebar li a:hover{
+  color:  #A9A9A9;
+}
+
+body{
+  font-family:  'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+    </style>
+</head>
+<body>
+
+
+<div id='sidebar'>
+      <ul>
+        <li><a href='index.html'>Главная</li>
+        <li><a href='index2.html'>Зачем играть в шахматы</li>
+        <li><a href='index3.html'>Какие есть фигуры</a></li>
+        <li><a href='index4.html'>Шахматный этикет</a></li>
+        <li><a href='index6.html'><b>Паспорт</b></a></li>
+        <li><a href='index7.html'>Алгоритмическая задача</a></li>
+        <li><a href='index8.html'>Магазин</a></li>
+      </ul>
+    </div>
+</header>
+
+<main>
+    <div class="passport-container">
+        <img src="fon1.jpg" alt="Паспорт РФ">
+
+        <img id="photo" src="foto1.jpg" alt="Фото" title="Это фотография ">
+
+        <div class="text" id="issued">ГУ МВД ПО Г. МОСКВЕ</div>
+        <div class="text" id="surname">Костюкова</div>
+        <div class="text" id="name">Татьяна</div>
+        <div class="text" id="father">Васильевна</div>
+        <div class="text" id="gender">жен</div>
+        <div class="text" id="birthplace">Москва</div>
+    </div>
+
+    <div class="button-container">
+        <button id="translateButton">Поменять</button>
+    </div>
+</main>
+
+<img src="sni.jpg">
+
+
+
+
+<script>
+    document.getElementById('translateButton').addEventListener('click', function() {
+        const issuedText = document.getElementById('issued');
+        const surnameText = document.getElementById('surname');
+        const nameText = document.getElementById('name');
+        const patronymicText = document.getElementById('father');
+        const genderText = document.getElementById('gender');
+        const birthplaceText = document.getElementById('birthplace');
+
+        if (issuedText.innerText === 'ГУ МВД ПО Г. МОСКВЕ') {
+            issuedText.innerText = 'MOSCOW GU MVD';
+            surnameText.innerText = 'Kostyukova';
+            nameText.innerText = 'Tatyana';
+            patronymicText.innerText = 'Vasilievna';
+            genderText.innerText = 'female';
+            birthplaceText.innerText = 'Moscow';
+        } else {
+            issuedText.innerText = 'ГУ МВД ПО Г. МОСКВЕ';
+            surnameText.innerText = 'Костюкова';
+            nameText.innerText = 'Татьяна';
+            patronymicText.innerText = 'Васильевна';
+            genderText.innerText = 'жен';
+            birthplaceText.innerText = 'Москва';
+        }
+    });
+</script>
+
+</body>
+</html>

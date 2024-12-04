@@ -1,0 +1,264 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  background-image: url(10104780000.jpg);
+  height: 225px;
+  background-size: cover; /* Добавлено для адаптивности */
+}
+
+nav {
+  background-color: black;
+  background-repeat: repeat-x;
+  font-family: 'Roboto', sans-serif;
+  font-size: 120%;
+  line-height: 1.8em;
+  color: black;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav li {
+  margin-top: 0px;
+  margin-right: 10px;
+  margin-left: 80px;
+  margin-bottom: 8px;
+  display: inline;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #8B4513;
+}
+
+nav li a:hover {
+  color: #FFF0F5;
+}
+
+#sidebar {
+  width: 230px;
+  height:805px;
+  margin-top: 0px;
+  margin-left: 0px;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  float: left;
+}
+
+#sidebar ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+#sidebar li {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+#sidebar li a {
+  text-decoration: none;
+  color: #8B4513;
+}
+
+#sidebar li a:hover {
+  color: #A9A9A9;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+#container {
+  width: 1000px;
+  height: auto;
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  float: left;
+}
+
+#form {
+  margin-top: 30px;
+  margin-left: 0px;
+  margin-bottom:  20px;
+}
+
+.chess {
+  width: 100px;
+  cursor: pointer;
+}
+
+.thumbnail {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+}
+
+.cat-section {
+  text-align: left;
+  margin-top: 10px;
+}
+
+footer {
+  background-color: black;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 80%;
+  padding: 5px;
+  height: 100px;
+  width: 100%; /* Занимает всю ширину экрана */
+  clear: both;
+  flex: 0 0 auto;
+  position: relative; /* Устанавливаем позиционирование */
+}
+
+
+ @media (max-width: 1300px) {
+
+  header {
+    height: 50px;
+    padding: 10px;
+    background-size: cover;
+    text-align: center;
+
+
+   }
+
+   nav li {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 10px;
+     margin-top: 10px;
+     width: fit-content;
+     font-size: larger;
+     padding: 5px;
+     text-align: center;
+   }
+
+    li {
+
+       list-style-type: none;
+    }
+
+  #sidebar {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin-bottom: 20px;
+    border-radius: 0;
+    padding: 10px;
+    box-sizing: border-box;
+
+  }
+
+
+   #container {
+     width: calc(100% - 20px);
+     margin-left: auto;
+     margin-right: auto;
+     float: none;
+     padding: 10px;
+     height: auto;
+     border-radius: 0;
+     box-sizing: border-box;
+   }
+
+    #content1 {
+      text-align: center;
+    }
+
+    .cat-section{
+      text-align: center;
+    }
+
+    #form {
+     margin-top: 30px;
+    margin-left: 0px;
+  }
+}
+     footer {
+     width: calc(100% - 20px);
+     padding:10px;
+     margin-top: 2%;
+     flex: 0 0 auto;
+   }
+
+
+
+
+
+
+/* Медиазапрос для мобильных устройств */
+@media (max-width: 768px) {
+
+  header {
+    height: 0px;
+    background-size: cover;
+    padding: 10px;
+  }
+
+  nav li {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: fit-content;
+    font-size: larger;
+    padding: 5px;
+    text-align: center;
+  }
+
+  #sidebar {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin-bottom: 20px;
+    border-radius: 0;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  #container {
+    width: calc(100% - 20px);
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    padding: 10px;
+    height: auto;
+    border-radius: 0;
+    box-sizing: border-box;
+   }
+
+   #form {
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 20px;
+     width: calc(100% - 40px);
+   }
+
+   footer {
+   width: calc(100% - 20px);
+     padding:10px;
+     margin-top: 2%;
+
+     flex: 0 0 auto;
+   }
+
+li {
+       display:  inline;
+       height:  auto;
+
+    }
+}
+
+

@@ -1,0 +1,168 @@
+* {
+  padding: 0px;
+
+}
+
+
+nav ul{
+	font-family:  'Roboto', sans-serif;
+	font-weight: bold;
+  	text-align: left;
+}
+
+nav li a{
+  text-decoration:  none; /*убираем подчеркивание ссылок*/
+  color: #8B4513;
+}
+nav li a:hover{
+  color:  gray;
+}
+
+p {
+	font-family:  'Roboto', sans-serif;
+}
+
+h2{
+	font-family:  'Roboto', sans-serif;
+}
+a{
+	font-family:  'Roboto', sans-serif;
+	color:  black;
+}
+
+nav{
+	margin-top: 0px;
+  margin-left:  320px;
+  margin-right: 200px;
+  margin-bottom: 0px;
+}
+
+#txt{
+	margin-top: 0px;
+  margin-left:  300px;
+  margin-right: 200px;
+  margin-bottom: 0px;
+}
+
+
+#sidebar{/*стиль общий для всего эл-та*/
+  width: 250px;
+  height: 1680px;
+  margin-top: 0px;
+  margin-left:  0px;
+  margin-bottom: 0px;
+  border-radius:  5px;
+  background-color:  #e0e0e0;
+  float:  left;
+  font-size: 18px ;
+}
+
+#sidebar ul{
+  list-style-type: none;
+  text-align:  center;
+}
+
+#sidebar li{
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+#sidebar li a{
+  text-decoration:  none;
+  color:  #8B4513;
+}
+
+#sidebar li a:hover{
+  color:  #A9A9A9;
+}
+
+body{
+  font-family:  'Roboto', sans-serif;
+}
+
+
+
+@media (max-width: 1300px) {
+
+  header {
+    height: 50px;
+    padding: 10px;
+    background-size: cover;
+    text-align: center;
+
+
+   }
+
+   nav li {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 10px;
+     margin-top: 10px;
+     width: fit-content;
+     font-size: larger;
+     padding: 5px;
+     text-align: center;
+   }
+
+    li {
+
+       list-style-type: none;
+    }
+
+  #sidebar {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin-bottom: 20px;
+    border-radius: 0;
+    padding: 10px;
+    box-sizing: border-box;
+
+  }
+
+
+
+
+
+
+/* Медиазапрос для мобильных устройств */
+@media (max-width: 768px) {
+
+  header {
+    height: 0px;
+    background-size: cover;
+    padding: 10px;
+  }
+
+  nav li {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: fit-content;
+    font-size: larger;
+    padding: 5px;
+    text-align: center;
+  }
+
+  #sidebar {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin-bottom: 20px;
+    border-radius: 0;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+
+li {
+       display:  inline;
+       height:  auto;
+
+
+    }
+}
+

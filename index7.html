@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href= "style5.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вычисление Z = 1/(X*Y)</title>
+    <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=L10mbNClWg4pRBk6LCF2azaVgudlUQ09F1YzeqyGgAnvJEGJkqd0LzgT18OhHyHQ6nFrUyGg6N2gwu9dGvTd50c7p06bl8ByNzGScM1oXHk" charset="UTF-8"></script>
+
+</head>
+<body>
+
+<div id='sidebar'>
+      <ul>
+        <li><a href='index.html'>Главная</li>
+        <li><a href='index2.html'>Зачем играть в шахматы </li>
+        <li><a href='index3.html'>Какие есть фигуры </a></li>
+        <li><a href='index4.html'>Шахматный этикет</a></li>
+        <li><a href='index6.html'>Паспорт</a></li>
+        <li><a href='index7.html'><b>Алгоритмическая задача</b></a></li>
+        <li><a href='index8.html'>Магазин</a></li>
+      </ul>
+    </div>
+
+<main>
+
+<div id="count">
+    <section class="form-container">
+        <h2>Вычисление Z = 1/(X*Y)</h2>
+        <form id="calculationForm">
+
+            <label for="xValue">Введите значение X:</label>
+            <input type="text" id="xValue" name="xValue" required><br>
+
+            <label for="yValue">Введите значение Y:</label>
+            <input type="text" id="yValue" name="yValue" required><br>
+
+            <button type="button" id="calculateButton">Вычислить</button>
+            <button type="button" id="sendButton">Отправить</button>
+
+        </form>
+
+        <div class="result" id="result">Результат: </div>
+    </section>
+</main>
+
+<script>
+    function calculateZ() {
+        let x = parseFloat(document.getElementById('xValue').value);
+        let y = parseFloat(document.getElementById('yValue').value);
+
+        if (x === 0 || y === 0) {
+            alert("Ошибка: X и Y не должны быть равны нулю!");
+            return;
+        }
+
+        if (isNaN(x) || isNaN(y)) {
+            alert("Ошибка: Введите корректные числовые значения для X и Y!");
+            return;
+        }
+
+        let z = 1 / (x * y);
+        document.getElementById('result').innerText = `Результат: Z = ${z}`;
+    }
+
+    function sendToBing() {
+        let x = parseFloat(document.getElementById('xValue').value);
+        let y = parseFloat(document.getElementById('yValue').value);
+
+        if (x === 0 || y === 0 || isNaN(x) || isNaN(y)) {
+            alert("Ошибка: Убедитесь, что X и Y корректны и не равны нулю.");
+            return;
+        }
+
+        let z = 1 / (x * y);
+        let query = `https://www.bing.com/search?q=Задача: Определить значение Z=1/(X*Y), где X=${x}, Y=${y}, Z=${z}`;
+        window.open(query, '_blank');
+    }
+
+    function clearFields() {
+        document.getElementById('xValue').value = '';
+        document.getElementById('yValue').value = '';
+        document.getElementById('result').innerText = 'Результат: ';
+    }
+
+    document.getElementById('calculateButton').addEventListener('click', calculateZ);
+    document.getElementById('sendButton').addEventListener('click', sendToBing);
+    document.getElementById('clearButton').addEventListener('click', clearFields);
+</script>
+</div>
+
+</body>
+</html>
